@@ -15,7 +15,7 @@ Before you begin, ensure you have the following prerequisites:
 - An AWS account.
 - AWS CLI configured with necessary access permissions.
 - AWS Serverless Application Model (AWS SAM) installed.
-- Python installed for local development.
+- Nodejs installed for local development.
 
 ## Getting Started
 1. Clone this repository.
