@@ -70,7 +70,7 @@ Resources:
                       schema:
                         $ref: "#/components/schemas/Empty"
               x-amazon-apigateway-integration:
-                credentials: "arn:aws:iam::1234567890:role/s3fullaccess"
+                credentials: "arn:aws:iam::${AWS::AccountId}:role/s3fullaccess"
                 httpMethod: "PUT"
                 uri: "arn:aws:apigateway:us-east-1:s3:path/{bucket}/{object}"
                 responses:
@@ -160,7 +160,7 @@ Resources:
                   - 'dynamodb:GetItem'
                   - 'dynamodb:PutItem'
                 Resource:
-                  - !Sub 'arn:aws:dynamodb:us-east-1:1234567890:table/${AWS::StackName}DynamoDBTable'
+                  - !Sub 'arn:aws:dynamodb:us-east-1:${AWS::AccountId}:table/${AWS::StackName}DynamoDBTable'
               - Effect: Allow
                 Action:
                   - 's3:GetObject'
